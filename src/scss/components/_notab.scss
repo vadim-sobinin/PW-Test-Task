@@ -1,0 +1,29 @@
+.notab {
+  @include tablet {
+    display: none;
+  }
+  // .notab__wrapper
+  &__wrapper {
+    height: 1106px;
+    width: 100%;
+    background-image: url(.././img/svg/notab-bg.svg);
+    background-size: 606px 213px;
+  }
+  // .notab__gradient
+  &__gradient {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(
+      360deg,
+      #000000 6.8%,
+      rgba(0, 0, 0, 0) 51.62%,
+      #000000 97.38%
+    );
+  }
+  // .notab__image
+  &__image {
+  }
+}

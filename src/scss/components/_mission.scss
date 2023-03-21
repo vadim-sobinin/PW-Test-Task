@@ -1,0 +1,105 @@
+.mission {
+  // .mission__flex
+  &__flex {
+    display: flex;
+    justify-content: space-between;
+
+    margin-right: 170px;
+    margin-bottom: 352px;
+
+    position: relative;
+
+    @include for-desktop {
+      margin-right: 0;
+      flex-direction: column-reverse;
+      gap: 163px;
+    }
+
+    @include mobile {
+      gap: 0px;
+    }
+
+    &::after {
+      content: "";
+      position: absolute;
+      width: 85px;
+      height: 85px;
+      top: 0;
+      right: 50px;
+      display: block;
+      border-radius: 100%;
+      background: #f101bf;
+      opacity: 0.7;
+      filter: blur(50px);
+      z-index: -1;
+    }
+  }
+
+  &__wrapper {
+    flex-basis: 751px;
+    height: 498px;
+
+    @include mobile {
+      flex-basis: 498px;
+    }
+
+    &::after {
+      content: "";
+      position: absolute;
+      display: block;
+      width: 700px;
+      height: 442px;
+
+      left: 0;
+      top: 20px;
+
+      background: #ffffff;
+      opacity: 0.2;
+      filter: blur(118.009px);
+
+      z-index: -1;
+
+      @include for-desktop {
+        display: none;
+      }
+    }
+  }
+
+  // .mission__iphone
+  &__iphone {
+    position: absolute;
+
+    width: 999px;
+    height: auto;
+    top: 0;
+    left: -300px;
+
+    @include for-desktop {
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, 0%) rotate(-90deg);
+    }
+  }
+  // .mission__content
+  &__content {
+    flex-basis: 325px;
+
+    @include for-desktop {
+      flex-basis: auto;
+      width: 400px;
+      margin: 0 auto;
+    }
+
+    @include mobile {
+      width: 300px;
+      margin-left: 15px;
+    }
+  }
+  // .mission__title
+  &__title {
+    margin-bottom: 22px;
+  }
+  // .mission__text
+  &__text {
+  }
+}

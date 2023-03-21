@@ -1,0 +1,123 @@
+.qr {
+  position: relative;
+
+  &__bg-images {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    z-index: -1;
+    display: flex;
+    justify-content: space-between;
+
+    @include tablet {
+      flex-direction: column;
+      align-items: center;
+      gap: 260px;
+    }
+  }
+
+  // .qr__bg
+  &__bg1,
+  &__bg2 {
+    width: 100%;
+    height: auto;
+    flex-grow: 1;
+  }
+
+  &__bg2 {
+    position: relative;
+
+    &::after {
+      position: absolute;
+      content: "";
+      width: 139px;
+      height: 55px;
+      top: 15px;
+      right: 155px;
+      display: block;
+      background-image: url(.././img/svg/Nightlife.svg);
+      background-size: contain;
+      background-position: center;
+      background-repeat: no-repeat;
+
+      @include tablet {
+        top: 350px;
+        left: 70px;
+      }
+      @include small-tablet {
+        top: 0;
+        left: 0px;
+      }
+      @include mobile {
+        width: 89px;
+        height: 35px;
+        top: 150px;
+        left: 10px;
+      }
+    }
+  }
+
+  &__bg-image1,
+  &__bg-image2 {
+    width: 100%;
+  }
+  // .qr__flex
+  &__flex {
+    margin-bottom: 300px;
+    margin-left: 155px;
+    padding-top: 170px;
+    display: flex;
+    align-items: end;
+    gap: 100px;
+
+    @include tablet {
+      flex-direction: column;
+      align-items: center;
+      margin-left: 0;
+    }
+  }
+  // .qr__content
+  &__content {
+  }
+  // .qr__title
+  &__title {
+    margin-bottom: 23px;
+  }
+  // .qr__text
+  &__text {
+    display: block;
+    max-width: 315px;
+    margin-bottom: 58px;
+  }
+  // .qr__download-links
+  &__download-links {
+    @include mobile {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+    }
+  }
+
+  // .qr__phone1
+  &__phone1 {
+    @include mobile {
+      margin-top: 200px;
+    }
+  }
+  // .qr__phone2
+  &__phone2 {
+    position: relative;
+    top: 371px;
+
+    @include tablet {
+      top: 0;
+    }
+  }
+
+  // .qr__download-links
+  &__download-links {
+    display: flex;
+    gap: 28px;
+  }
+}

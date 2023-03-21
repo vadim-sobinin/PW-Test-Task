@@ -1,0 +1,196 @@
+.form {
+  @include tablet {
+    margin-top: 200px;
+  }
+  // .form__content
+  &__content {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-bottom: 155px;
+    z-index: 1;
+
+    position: relative;
+
+    &::before {
+      content: "";
+      position: absolute;
+      width: 247px;
+      height: 250px;
+      display: block;
+      top: -60px;
+      left: 245px;
+      background: linear-gradient(12.08deg, #f101bf 2.82%, #0066ff 97.06%);
+      opacity: 0.3;
+      filter: blur(125px);
+      transform: rotate(5.78deg);
+      z-index: 0;
+    }
+
+    &::after {
+      content: "";
+      position: absolute;
+      width: 337px;
+      height: 341px;
+      display: block;
+      bottom: 400px;
+      right: -230px;
+      background: linear-gradient(12.08deg, #f101bf 2.82%, #0066ff 97.06%);
+      opacity: 0.3;
+      filter: blur(90px);
+      transform: rotate(5.78deg);
+      z-index: -1;
+    }
+  }
+  // .form__title
+  &__title {
+  }
+  // .form__text
+  &__text {
+    margin-top: 24px;
+    width: 100%;
+    max-width: 580px;
+    text-align: center;
+    margin-bottom: 82px;
+  }
+  // .form__input
+  // .form__main
+  &__main {
+    width: 100%;
+    max-width: 818px;
+    display: flex;
+    flex-direction: column;
+    gap: 23px;
+    margin-bottom: 91px;
+
+    @include mobile {
+      gap: 16px;
+    }
+  }
+  // .form__input
+  &__input {
+    width: 100%;
+    padding: 28px 23px;
+
+    border: 1px solid #5c5c5c;
+    border-radius: 10px;
+
+    font-weight: 400;
+    font-size: 18px;
+    line-height: 25px;
+
+    @include mobile {
+      padding: 18px 11px;
+
+      font-size: 16px;
+      line-height: 22px;
+    }
+
+    // .form__input_short
+    &_short {
+      display: flex;
+      gap: 24px;
+      input {
+        width: calc(50% - 12px);
+      }
+
+      @include mobile {
+        flex-direction: column;
+        gap: 16px;
+        input {
+          width: 100%;
+        }
+      }
+    }
+
+    &.invalid {
+      border: 2px solid #ff0000;
+      border-radius: 10px;
+    }
+  }
+  // .form__message
+  &__message {
+    margin-bottom: 60px;
+
+    @include mobile {
+      max-height: 140px;
+      margin-bottom: 40px;
+    }
+  }
+  // .form__btn
+  &__btn {
+    width: 100%;
+    margin: 0 auto;
+    padding: 25px;
+    max-width: 398px;
+    border: 1px solid #ffffff;
+    border-radius: 10px;
+    font-family: "MontserratBold";
+    font-weight: 700;
+    font-size: 24px;
+    line-height: 29px;
+    color: var(--light-color);
+    transition: background 0.2s;
+
+    &:hover {
+      background: rgba(255, 255, 255, 0.2);
+    }
+
+    @include mobile {
+      max-width: 345px;
+    }
+  }
+  // .form__download
+  &__download {
+    font-family: "NotoSansBold";
+    font-weight: 700;
+    font-size: 24px;
+    line-height: 33px;
+    letter-spacing: 0.03em;
+  }
+  // .form__download-links
+  &__download-links {
+    margin-top: 33px;
+    display: flex;
+    gap: 59px;
+
+    @include small-tablet {
+      margin-top: 60px;
+      flex-direction: column;
+      gap: 24px;
+    }
+  }
+  // .form__appstore
+  &__appstore {
+    width: 259px;
+    height: 82px;
+
+    transition: 0.3s;
+
+    &:hover {
+      transform: scale(1.1);
+    }
+
+    @include small-tablet {
+      object-fit: contain;
+      width: 185px;
+      height: 60px;
+    }
+  }
+  // .form__googleplay
+  &__googleplay {
+    width: 292px;
+    height: 82px;
+
+    transition: 0.3s;
+
+    &:hover {
+      transform: scale(1.1);
+    }
+    @include small-tablet {
+      object-fit: contain;
+      width: 185px;
+      height: 60px;
+    }
+  }
+}

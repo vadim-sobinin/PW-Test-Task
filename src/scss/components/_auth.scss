@@ -1,0 +1,76 @@
+.auth {
+  // .auth__content
+  &__content {
+    display: flex;
+    align-items: stretch;
+    justify-content: space-around;
+    margin-bottom: 267px;
+
+    @include for-desktop {
+      align-items: center;
+      flex-direction: column;
+      gap: 30px;
+    }
+  }
+
+  // .auth__title
+  &__title {
+    margin: 0;
+    max-width: 350px;
+    font-family: "NotoSansBold";
+    font-weight: 700;
+    font-size: 30px;
+    line-height: 41px;
+    color: var(--light-color);
+
+    @include mobile {
+      font-size: 24px;
+      line-height: 33px;
+      max-width: 258px;
+    }
+  }
+  // .auth__link
+  &__link {
+    width: fit-content;
+    font-weight: 400;
+    font-size: 24px;
+    line-height: 33px;
+    text-decoration-line: underline;
+    color: var(--light-color);
+
+    transition: 0.3s;
+
+    &:hover {
+      transform: scale(1.1);
+    }
+
+    @include mobile {
+      font-size: 18px;
+      line-height: 25px;
+    }
+  }
+  // .auth__block
+  &__block {
+    padding: 61px 55px;
+    min-width: 503px;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    gap: 30px;
+    flex-basis: 503px;
+
+    border: 2px solid rgba($color: #fff, $alpha: 0.5);
+    border-radius: 21px;
+
+    @include for-desktop {
+      flex-basis: 312px;
+    }
+
+    @include mobile {
+      padding: 39px 33px;
+      min-width: 345px;
+      flex-basis: 233px;
+    }
+  }
+}

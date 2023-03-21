@@ -1,0 +1,220 @@
+.hero {
+  // .hero__main
+  &__main {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-right: 83px;
+
+    @include for-desktop {
+      margin-right: 0;
+    }
+
+    @include small-tablet {
+      position: relative;
+    }
+  }
+  // .hero__content
+  &__content {
+    flex-basis: 643px;
+    display: flex;
+    flex-direction: column;
+    gap: 55px;
+
+    @include for-desktop {
+      flex-basis: 310px;
+    }
+  }
+  // .hero__title
+  &__title {
+    margin: 0;
+    font-family: "MontserratBold";
+    font-weight: 700;
+    font-size: 64px;
+    line-height: 70px;
+    color: var(--light-color);
+    margin-bottom: 88px;
+
+    @include for-desktop {
+      font-size: 50px;
+      line-height: 56px;
+      margin-bottom: 0;
+    }
+
+    @include mobile {
+      width: 210px;
+      font-size: 35px;
+      line-height: 40px;
+    }
+  }
+  // .hero__description
+  &__description {
+    display: flex;
+    gap: 30px;
+    align-items: end;
+
+    position: relative;
+
+    &::after {
+      content: "";
+      display: block;
+      width: 300px;
+      height: 300px;
+      position: absolute;
+      top: -110px;
+      left: -87px;
+      background-image: url(.././img/svg/bg-blur.svg);
+      background-repeat: no-repeat;
+      background-position: center;
+      z-index: -1;
+
+      // @include for-desktop {
+      //   display: none;
+      // }
+    }
+  }
+  // .hero__slash-line
+  &__slash-line {
+    @include for-desktop {
+      display: none;
+    }
+  }
+  // .hero__text
+  &__text {
+    max-width: 380px;
+    font-weight: 400;
+    font-size: 20px;
+    line-height: 27px;
+    color: var(--light-color);
+
+    @include small-tablet {
+      font-size: 18px;
+      line-height: 24px;
+    }
+
+    @include mobile {
+      font-size: 16px;
+      line-height: 24px;
+      width: 240px;
+    }
+  }
+  // .hero__image
+  &__image {
+    img {
+      max-width: 100%;
+      height: auto;
+      object-fit: cover;
+    }
+    width: 333px;
+    height: auto;
+
+    @include tablet {
+      width: 277px;
+    }
+
+    @include small-tablet {
+      width: 240px;
+      position: absolute;
+      right: -105px;
+    }
+
+    @include mobile {
+      width: 162px;
+      right: -75px;
+    }
+
+    position: relative;
+    &::after {
+      content: "";
+      display: block;
+      width: 910px;
+      height: 572px;
+      position: absolute;
+      top: -50px;
+      left: -200px;
+      background-image: url(.././img/svg/bg-mark1.svg);
+      background-repeat: no-repeat;
+      background-position: center;
+      background-size: contain;
+      opacity: 0.25;
+      filter: blur(100px);
+      z-index: -1;
+
+      @include small-tablet {
+        left: -250px;
+      }
+    }
+  }
+  // .hero__bottom
+  &__bottom {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-top: 81px;
+    margin-right: 63px;
+    margin-bottom: 170px;
+    @include for-desktop {
+      margin-right: 0;
+      gap: 25px;
+    }
+    @include small-tablet {
+      margin-top: 113px;
+      flex-direction: column;
+    }
+    @include mobile {
+      margin-top: 140px;
+      gap: 34px;
+    }
+  }
+  // .hero__download
+  &__download {
+    font-family: "MontserratBold";
+    font-weight: 700;
+    font-size: 35px;
+
+    @include for-desktop {
+      font-size: 24px;
+    }
+  }
+  // .hero__download-links
+  &__download-links {
+    display: flex;
+    gap: 28px;
+
+    @include mobile {
+      flex-direction: column;
+      gap: 24px;
+    }
+  }
+  // .hero__appstore
+  &__appstore {
+    object-fit: contain;
+    width: 163px;
+    height: 51px;
+    @include small-tablet {
+      width: 185px;
+      height: 60px;
+    }
+
+    transition: 0.3s;
+
+    &:hover {
+      transform: scale(1.1);
+    }
+  }
+  // .hero__googleplay
+  &__googleplay {
+    object-fit: contain;
+    width: 185px;
+    height: 51px;
+    @include small-tablet {
+      width: 185px;
+      height: 60px;
+    }
+    transition: 0.3s;
+
+    &:hover {
+      transform: scale(1.1);
+    }
+  }
+}

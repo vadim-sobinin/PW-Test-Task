@@ -1,0 +1,19 @@
+// если вы хотите использовать sass-переменные - удалите root
+// colors
+:root {
+  // base
+  --font-family: "NotoSansReg", sans-serif;
+  --content-width: 1240px;
+  --content-fluid-width: 1240px;
+  --container-offset: 100px;
+  --container-fluid-offset: 0px;
+  --container-width: calc(var(--content-width) + (var(--container-offset) * 2));
+  --container-fluid-width: calc(
+    var(--content-fluid-width) + (var(--container-offset) * 2)
+  );
+
+  // colors
+  --light-color: #fff;
+  --bg-color: #000;
+  --error-color: #ff0000;
+}

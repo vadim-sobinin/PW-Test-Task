@@ -1,0 +1,133 @@
+.generate {
+  @include mobile {
+    margin-top: -100px;
+  }
+  // .generate__main-wrapper
+  &__main-wrapper {
+    @include small-tablet {
+      display: flex;
+      flex-direction: column-reverse;
+    }
+  }
+
+  // .generate__wrapper
+  &__wrapper {
+    margin-bottom: -50px;
+    position: relative;
+    height: 962px;
+    width: 100%;
+    background-image: url(.././img/svg/notab.svg);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: 100%;
+
+    @include mobile {
+      height: 462px;
+      margin-bottom: -200px;
+    }
+  }
+  // .generate__image-blur
+  &__image-blur {
+    width: 1032px;
+    height: 100%;
+    margin: 0 auto;
+
+    border-radius: 100%;
+    background: linear-gradient(
+      12.08deg,
+      rgba(#f101bf, 0.15) 2.82%,
+      rgba(#0066ff, 0.15) 97.06%
+    );
+
+    filter: blur(155.784px);
+    z-index: -1;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  // .generate__main
+  &__main {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    z-index: 1;
+
+    &::after {
+      content: "Scan QR-code";
+      position: absolute;
+      bottom: 370px;
+      right: -280px;
+      width: 241px;
+      height: 114px;
+      background-image: url(.././img/svg/scan-arrow.svg);
+      background-position: -10px 0;
+      background-repeat: no-repeat;
+      background-size: 114px 76px;
+
+      display: flex;
+      align-items: flex-end;
+      justify-content: end;
+
+      text-align: end;
+
+      font-family: "MontserratBold";
+      font-weight: 700;
+      font-size: 21px;
+      line-height: 26px;
+
+      @include tablet {
+        background-position: center 0;
+        right: -190px;
+      }
+
+      @include small-tablet {
+        height: 130px;
+        right: -65px;
+        bottom: -60px;
+
+        background-image: url(.././img/svg/scan-arrow45deg.svg);
+        background-size: 134px 92px;
+        background-position: 150px 0px;
+      }
+    }
+  }
+  // .generate__flex
+  &__flex {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-bottom: 192px;
+
+    @include tablet {
+      flex-direction: column;
+      gap: 24px;
+      align-items: start;
+    }
+
+    @include small-tablet {
+      margin-bottom: 0;
+    }
+  }
+  // .generate__title
+  &__title {
+    flex-basis: 381px;
+
+    @include tablet {
+      flex-basis: auto;
+    }
+  }
+  // .generate__text
+  &__text {
+    flex-basis: 292px;
+
+    @include tablet {
+      flex-basis: auto;
+    }
+
+    @include small-tablet {
+      max-width: 292px;
+    }
+  }
+}
